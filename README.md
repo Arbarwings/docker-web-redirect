@@ -9,7 +9,6 @@ _Hint: This repo was forked from https://github.com/MorbZ/docker-web-redirect._
 - Keeps the URL path and GET parameters
 - Permanent redirect (HTTP 301)
 - Image Size only ~25MB
-- Image runs for security reasons with non-root user
 
 ## Usage ##
 ### Docker run ###
@@ -19,7 +18,7 @@ Possible redirect targets include domains (`mydomain.com`), paths (`mydomain.com
 
 **Example (Listen on Port 80):** `$ docker run --rm -d -e REDIRECT_TARGET=mydomain.com -p 80:80 arbarwings/docker-web-redirect`
 
-**Example (Listen on Port 8080):** `$ docker run --rm -d -u0:0  -e REDIRECT_TARGET=mydomain.com -e PORT=8080 -p 8080:8080 arbarwings/docker-web-redirect `
+**Example (Listen on Port 8080):** `$ docker run --rm -d -e REDIRECT_TARGET=mydomain.com -e PORT=8080 -p 8080:8080 arbarwings/docker-web-redirect `
 
 ### Paths are retained ###
 The URL path and GET parameters are retained. That means that a request to `http://myolddomain.com/index.php?page=2` will be redirected to `http://mydomain.com/index.php?page=2` when `REDIRECT_TARGET=mydomain.com` is set.
