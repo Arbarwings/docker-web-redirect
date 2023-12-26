@@ -4,7 +4,7 @@ if [ -z "$REDIRECT_TARGET" ]; then
 	exit 1
 else
 	# Add https if not set
-	if ! [[ $REDIRECT_TARGET =~ ^http?:// ]]; then
+	if ! [[ $REDIRECT_TARGET =~ ^https?:// ]]; then
 		REDIRECT_TARGET="https://$REDIRECT_TARGET"
 	fi
 
