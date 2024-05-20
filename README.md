@@ -5,7 +5,7 @@ This Docker container listens (by default) on port 80 and redirects all web traf
 _Hint: This repo was forked from https://github.com/MorbZ/docker-web-redirect._
 
 ## Features ##
-- Nginx 1.25
+- Nginx 1.26
 - Lightweight: Uses only ~2 MB RAM on Linux
 - Keeps the URL path and GET parameters
 - Permanent redirect (HTTP 301)
