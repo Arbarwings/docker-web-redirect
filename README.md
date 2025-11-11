@@ -31,7 +31,6 @@ Redirects are permanent (HTTP status code 301). That means browsers will cache t
 A sample docker-compose file that redirects any incomming domain to `mydomain.com` could look like this:
 
 ```yaml
-version: '3'
 services:
   redirect:
     image: arbarwings/docker-web-redirect
